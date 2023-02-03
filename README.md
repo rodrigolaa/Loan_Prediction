@@ -1,40 +1,42 @@
-# 1) Loan predction classifier 
-## This project 
+# Loan predcition classifier 
+This project aims to create all <b>backend infrastructure</b> to host a ML model!
+The original machine learning model was developed in this [project](https://colab.research.google.com/drive/1P2Ao5k5a3p13pg2WmBOl7XEnd4nL7MvM), where we developed a Random Forest classification model to classify a loan as approved or not approved.
 
-### Get Spotify Credentials in [here](https://developer.spotify.com/dashboard/applications)
+## Project Flow 
+     
 
-     Need To create an App, put a name and description for it, and you are good to go!
+<img src="img\project_design.png"  width="700" height="250">
 
-<img src="https://user-images.githubusercontent.com/50839107/196182699-468fc75c-483b-4557-9d95-11a9ced27026.png" width="700" height="250">
+Deploy a docker image with a python script and all dependencies necessary, then deploy in ECR instance of AWS,  !
 
+### What I have learnend? 
 
-### Get Google Sheets API - [Google Cloud](https://console.cloud.google.com/welcome)
-
-     - First you need to create an account in Google Cloud
-     - then, Create a Project
-     - Create an Google Sheets API
-     - Share the google sheets with the email generated with the Google Sheets API.
-     - Save the credetials json file in the folder of the project.
+     - How to create a Rest API with FastAPI.
+     - How to container the project in a Docker Image.
+     - How to deploy a image in AWS ECR (Elastic Container Registry) with AWS CLI.
+     - How to link a image with AWS Lambda Function.
+     - How to configure an Rest API with AWS API Gateway.
+     - How to teste and use API with Postman.
      
      
-#### For more details watch this video teaching how to configure the Google API [tutorial](https://www.youtube.com/watch?v=ddf5Z0aQPzY&t=292s)
+### Try it <b>yourself</b>! Import the curl in Postman and change the parameters!
+
+     TotalIncome: Sum of monthly salary that the applicant and the guarantor.
+     LoanAmount: Amount of loan requested by applicant.
+     Credit_History: If the applicant has credit card (yes (1), no (0)).
+     Property_Area: Property type (Urban (0)/Semi Urban(1)/ Rural(2)).
+
      
-     
-![image](https://user-images.githubusercontent.com/50839107/196178326-f698ad02-266f-42ae-9b9c-97c42256c928.png)
+![image](img\postaman_development.png)
+
+     curl --location --request POST 'https://a2czf6h0j0.execute-api.us-east-1.amazonaws.com/dev/predictions' \
+     --header 'Content-Type: application/json' \
+     --data-raw '{
+     "TotalIncome": 2000,
+     "LoanAmount": 100,
+     "Credit_History": 1,
+     "Property_Area": 2
+     }'
 
 
-## Upload the Script in a AWS Lambda Function to run in a server.
-
-### Create Python Deployment Package (.zip) to Lambda Function
-
-#### Set windows python and packages to Linux Base:
-
-##### For more details follow this [Tutorial](https://www.youtube.com/watch?v=OLXEekDzpHQ&t=12s)
-
-![image](https://user-images.githubusercontent.com/50839107/196178492-751e3662-af7a-4579-bca2-edeacc4f7202.png)
-
-## Then create a Data Studio Dash where you can analyse the trend of the musics daily.
-#### [Link](https://datastudio.google.com/u/0/reporting/6ed6acc6-36f4-4366-a348-a297ba9c4e52/page/X8w4C).
-
-![image](https://user-images.githubusercontent.com/50839107/196177479-c23fc2df-3e65-40d1-9fc2-b3ed9af138e6.png)
-
+## [Full Documentation](Loan-Prediction-Documentation.pdf) Loan Prediction Classifier.
