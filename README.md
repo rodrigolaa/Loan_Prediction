@@ -7,7 +7,6 @@ The original machine learning model was developed in this [project](https://cola
 
 <img src="img\project_design.png"  width="700" height="250">
 
-Deploy a docker image with a python script and all dependencies necessary, then deploy in ECR instance of AWS,  !
 
 ### What I have learnend? 
 
@@ -27,7 +26,7 @@ Deploy a docker image with a python script and all dependencies necessary, then 
      Property_Area: Property type (Urban (0)/Semi Urban(1)/ Rural(2)).
 
      
-![image](img\postaman_development.png)
+<img src="img\postaman_development.png"  width="700" height="400">
 
      curl --location --request POST 'https://a2czf6h0j0.execute-api.us-east-1.amazonaws.com/dev/predictions' \
      --header 'Content-Type: application/json' \
