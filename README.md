@@ -5,7 +5,7 @@ The original machine learning model was developed in this [project](https://cola
 ## Project Flow 
      
 
-<img src="img\project_design.png"  width="700" height="250">
+<img src="img\project_design_1.png"  width="700" height="250">
 
 
 ### What I have learnend? 
